@@ -4,29 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Palm Springs</title>
+    <title>Group Project Map</title>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
     <style>
     #map {
-        width: 75%;
+        width: 50%;
         height: 450px;
     }
     </style>
 </head>
 <body>
-    <div class="input-group input-group-sm mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-sm">Street Address, City, State, Zip Code</span>
+    <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputName">Name</label>
+            <input type="email" class="form-control" id="inputName">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPhoneNumber">Phone Number</label>
+            <input type="password" class="form-control" id="inputPhoneNumber">
+          </div>
         </div>
-        <input type="text" id="userAddress" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-    </div>
-    <button id="submitButton" type="button" class="btn btn-success">Submit</button>
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Address 2</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">State</label>
+            <input id="inputState" class="form-control" type="text">
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submitButton">Sign in</button>
+      </form>
     <br>
     <br>
-    <div id="theAddress"></div>
     <div id="map"></div>
+
+    <div id="theAddress"></div>
 
 
     
@@ -36,51 +65,77 @@
     <script>
 
 
-var personalAPIKey = "AIzaSyA0rdSnRWTkL1PyhoHgsMoYfs8GhAJbJnw";
+    var personalAPIKey = "AIzaSyA0rdSnRWTkL1PyhoHgsMoYfs8GhAJbJnw";
+    var address = "1600+Amphitheatre+Parkway,+Mountain+View,+CA";
 
-var address = "1600+Amphitheatre+Parkway,+Mountain+View,+CA";
+    var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=" + personalAPIKey;
 
-var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=" + personalAPIKey;
+    
 
-
-$("#submitButton").on("click", function(event){
+    $("#submitButton").on("click", function(event){
         event.preventDefault();
 
-        var userAddress = $("#userAddress").val();
-        console.log("user Address", userAddress);
+        var name = $("#inputName").val();
+        var phoneNumber = $("#inputPhoneNumber").val();
+        var firstAddress = $("#inputAddress").val();
+        var secondAddress = $("#inputAddress2").val();
+        var cityofAddress = $("#inputCity").val();
+        var stateofAddress = $("#inputState").val();
+        var zipCodeofAddress = $("#inputZip").val();
+
+        var user = {
+
+            name : name,
+            phoneNumber : phoneNumber,
+            address1: firstAddress,
+            address2: secondAddress,
+            city: cityofAddress,
+            state: stateofAddress,
+            zip: zipCodeofAddress
+            
+        }
+
+        localStorage.setItem("user", JSON.stringify(user));
 
         
-        var ourQueryURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + userAddress + "&key=" + personalAPIKey;
 
+
+        var addingAddresstogether = secondAddress === "" ? `${firstAddress} ${cityofAddress} ${stateofAddress} ${zipCodeofAddress}` : `${firstAddress} ${secondAddress} ${cityofAddress} ${stateofAddress} ${zipCodeofAddress}`;
+        console.log("full address", addingAddresstogether);
+
+
+        $("#theAddress").append(addingAddresstogether);
+
+        
+        var ourQueryURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + addingAddresstogether + "&key=" + personalAPIKey;
 
         $.ajax({
             url: ourQueryURL,
             method: "GET"
         }).then(function(response){
-
             if (response.status === "OK"){
-
-
             var latitude = response.results[0].geometry.location.lat;
             var longitude = response.results[0].geometry.location.lng;
             console.log(response);
 
 
+
     
     initMap(latitude, longitude);
+
             }
             else {
                 alert("ENTER CORRECT ADDRESS");
             }
         
     
+        })
     })
 
-})
+
 
 function initMap(lat, long){
 
-var arr = [];
 var  saguaro = {lat: lat, lng: long};
 var map = new google.maps.Map(
     document.getElementById("map"),
@@ -99,38 +154,12 @@ var marker = new google.maps.Marker({
     animation: google.maps.Animation.BOUNCE,
 })
 
-arr.push(marker);
-arr.map(x => x);
-
 
 
 }
 
 
-// $.ajax({
-//     url: url,
-//     method: "GET"
-// }).then(function(response){
-//     var latitude = response.results[0].geometry.location.lat;
-//     var longitude = response.results[0].geometry.location.lng;
-//     console.log(response);
-
-//     function initMap(){
-
-
-//         var  saguaro = {lat: latitude, lng: longitude};
-//         var map = new google.maps.Map(
-//         document.getElementById("map"),
-//         {zoom: 16, center: saguaro}
-//         );
-
-//         var marker = new google.maps.Maker({
-//             position: saguaro, map: map
-//         })
-//     }
-//     initMap();
-// })
-
+    
 
 
 
