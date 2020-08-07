@@ -117,8 +117,12 @@
             var latitude = response.results[0].geometry.location.lat;
             var longitude = response.results[0].geometry.location.lng;
             console.log(response);
+
+
+
     
-        initMap(latitude, longitude);
+    initMap(latitude, longitude);
+
             }
             else {
                 alert("ENTER CORRECT ADDRESS");
@@ -129,40 +133,33 @@
     })
 
 
-    function initMap(lat, long){
 
-        var arr = [];
-        var  saguaro = {lat: lat, lng: long};
+function initMap(lat, long){
 
-        var map = new google.maps.Map(
-            document.getElementById("map"),
-            {zoom: 16, center: saguaro}
-        );
+var  saguaro = {lat: lat, lng: long};
+var map = new google.maps.Map(
+    document.getElementById("map"),
+    {zoom: 16, center: saguaro}
+);
 
-        var icon = {
-            url: "https://i.pinimg.com/originals/40/d7/be/40d7bec2768bc8cfa69f6d8ed4f85c89.png", 
-            scaledSize: new google.maps.Size(width= 27, height=27), 
-            origin: new google.maps.Point(0,0), 
-            anchor: new google.maps.Point(0, 0) 
-        }
+var icon = {
+url: "https://i.pinimg.com/originals/40/d7/be/40d7bec2768bc8cfa69f6d8ed4f85c89.png", 
+scaledSize: new google.maps.Size(width= 27, height=27), 
+origin: new google.maps.Point(0,0), 
+anchor: new google.maps.Point(0, 0) }
+var marker = new google.maps.Marker({
+    position: saguaro,
+    map:map,
+    icon:icon,
+    animation: google.maps.Animation.BOUNCE,
+})
+
+
+
+}
+
+
     
-        var marker = new google.maps.Marker({
-            position: saguaro,
-            map:map,
-            icon:icon,
-            animation: google.maps.Animation.BOUNCE,
-        })
-
-        arr.push(marker);
-        
-    }
-
-
-// the text inputed in input (#userAddress) for it to be appended to the Address
-
-// $("#submitButton").on("click", function(event){
-//     $("#userAddress")text.
-// }
 
 
 
