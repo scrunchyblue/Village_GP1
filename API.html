@@ -70,11 +70,6 @@
 
     var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=" + personalAPIKey;
 
-
-
-
-    var listofAddresses = [];
-    // var locatedInStorage = localStorage.setItem();
     
 
     $("#submitButton").on("click", function(event){
@@ -89,6 +84,7 @@
         var zipCodeofAddress = $("#inputZip").val();
 
         var user = {
+
             name : name,
             phoneNumber : phoneNumber,
             address1: firstAddress,
@@ -98,6 +94,11 @@
             zip: zipCodeofAddress
             
         }
+
+        localStorage.setItem("user", JSON.stringify(user));
+
+        
+
 
         var addingAddresstogether = secondAddress === "" ? `${firstAddress} ${cityofAddress} ${stateofAddress} ${zipCodeofAddress}` : `${firstAddress} ${secondAddress} ${cityofAddress} ${stateofAddress} ${zipCodeofAddress}`;
         console.log("full address", addingAddresstogether);
