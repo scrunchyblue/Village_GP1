@@ -66,30 +66,8 @@ $("#submitButton").on("click", function(event){
             console.log(response);
 
 
-    function initMap(){
-
-
-        var  saguaro = {lat: latitude, lng: longitude};
-        var map = new google.maps.Map(
-            document.getElementById("map"),
-            {zoom: 16, center: saguaro}
-        );
-        
-        var icon = {
-        url: "https://i.pinimg.com/originals/40/d7/be/40d7bec2768bc8cfa69f6d8ed4f85c89.png", 
-        scaledSize: new google.maps.Size(width= 27, height=27), 
-        origin: new google.maps.Point(0,0), 
-        anchor: new google.maps.Point(0, 0) }
-        var marker = new google.maps.Marker({
-            position: saguaro,
-            map:map,
-            icon:icon,
-            animation: google.maps.Animation.BOUNCE,
-        })
-        
-
-    }
-    initMap();
+    
+    initMap(latitude, longitude);
             }
             else {
                 alert("ENTER CORRECT ADDRESS");
@@ -100,7 +78,33 @@ $("#submitButton").on("click", function(event){
 
 })
 
+function initMap(lat, long){
 
+var arr = [];
+var  saguaro = {lat: lat, lng: long};
+var map = new google.maps.Map(
+    document.getElementById("map"),
+    {zoom: 16, center: saguaro}
+);
+
+var icon = {
+url: "https://i.pinimg.com/originals/40/d7/be/40d7bec2768bc8cfa69f6d8ed4f85c89.png", 
+scaledSize: new google.maps.Size(width= 27, height=27), 
+origin: new google.maps.Point(0,0), 
+anchor: new google.maps.Point(0, 0) }
+var marker = new google.maps.Marker({
+    position: saguaro,
+    map:map,
+    icon:icon,
+    animation: google.maps.Animation.BOUNCE,
+})
+
+arr.push(marker);
+arr.map(x => x);
+
+
+
+}
 
 
 // $.ajax({
