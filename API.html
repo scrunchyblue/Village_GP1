@@ -63,6 +63,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
+$(document).ready(() => {
 
 
     var personalAPIKey = "AIzaSyA0rdSnRWTkL1PyhoHgsMoYfs8GhAJbJnw";
@@ -121,8 +122,7 @@
 
 
     
-    initMap(latitude, longitude);
-
+                initMap(latitude, longitude);
             }
             else {
                 alert("ENTER CORRECT ADDRESS");
@@ -132,11 +132,14 @@
         })
     })
 
-
-
+})
+// set conditionals so that the initMap runs based on if there are objects in the array.
+var locationArr = [];
 function initMap(lat, long){
 
 var  saguaro = {lat: lat, lng: long};
+locationArr.push(saguaro)
+console.log(locationArr);
 var map = new google.maps.Map(
     document.getElementById("map"),
     {zoom: 16, center: saguaro}
@@ -147,19 +150,23 @@ url: "https://i.pinimg.com/originals/40/d7/be/40d7bec2768bc8cfa69f6d8ed4f85c89.p
 scaledSize: new google.maps.Size(width= 27, height=27), 
 origin: new google.maps.Point(0,0), 
 anchor: new google.maps.Point(0, 0) }
+for (var i = 0; i < locationArr.length; i++){
 var marker = new google.maps.Marker({
-    position: saguaro,
+    position: locationArr[i],
     map:map,
     icon:icon,
     animation: google.maps.Animation.BOUNCE,
 })
+}
+
 
 
 
 }
 
 
-    
+
+
 
 
 
