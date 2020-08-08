@@ -115,9 +115,15 @@ form {
 }
 
 .modal {
+<<<<<<< HEAD
   /* flex-direction: column; */
   width: 100%;
   height: 70%;
+=======
+  flex-direction: column;
+  width: 100%;
+  height: 60%;
+>>>>>>> e6c0b36975e3e572683d01f44a69c6b89e3a6dea
 }
 
 .formBttn {
