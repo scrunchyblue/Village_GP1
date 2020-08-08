@@ -20,11 +20,11 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputName">Name</label>
-            <input type="email" class="form-control" id="inputName">
+            <input type="text" class="form-control" id="inputName">
           </div>
           <div class="form-group col-md-6">
             <label for="inputPhoneNumber">Phone Number</label>
-            <input type="password" class="form-control" id="inputPhoneNumber">
+            <input type="text" class="form-control" id="inputPhoneNumber">
           </div>
         </div>
         <div class="form-group">
@@ -73,6 +73,7 @@ $(document).ready(() => {
 
     
 
+
     $("#submitButton").on("click", function(event){
         event.preventDefault();
 
@@ -96,13 +97,25 @@ $(document).ready(() => {
             
         }
 
-        localStorage.setItem("user", JSON.stringify(user));
+        console.log("user: ", user);
+
+        var arrayWithUserInfo = [];
+
+        var userInfo = JSON.parse(localStorage.getItem("user"));
+
+        arrayWithUserInfo = [userInfo];
+        arrayWithUserInfo.push(user);
+
+        localStorage.setItem("user", JSON.stringify(arrayWithUserInfo));
+
+        console.log("local storage: ", JSON.stringify(arrayWithUserInfo));
+        console.log("var userInfo ", userInfo);
+
 
         
 
-
         var addingAddresstogether = secondAddress === "" ? `${firstAddress} ${cityofAddress} ${stateofAddress} ${zipCodeofAddress}` : `${firstAddress} ${secondAddress} ${cityofAddress} ${stateofAddress} ${zipCodeofAddress}`;
-        console.log("full address", addingAddresstogether);
+        console.log("full address: ", addingAddresstogether);
 
 
         $("#theAddress").append(addingAddresstogether);
@@ -163,11 +176,6 @@ var marker = new google.maps.Marker({
 
 
 }
-
-
-
-
-
 
 
 </script>
