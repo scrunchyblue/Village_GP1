@@ -1,6 +1,8 @@
 
+
 $(document).ready(() => {
     
+
 
     var userInfo = JSON.parse(localStorage.getItem("user")) || [];
     console.log("var userInfo ", userInfo);
