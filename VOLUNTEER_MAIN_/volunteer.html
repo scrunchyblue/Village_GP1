@@ -15,7 +15,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./volunteer.css"/>
-    <script src="../script.js"></script>
+    <script src="/VOLUNTEER_MAIN_/script.js"></script>
 
 </head>
 <body>
@@ -68,33 +68,36 @@
         <br>
 
         <!-- MAP WILL BE INSERTED BELOW -->
-        <div id="map"></div>
+        <div class="mapView" id="map">
+           
+
+        </div>
 
         <br>
         <div id="theAddress"></div>
 
-        <div class="blocks-middle">
+            <div class="blocks-middle">
 
-            <div class="categories">
-                <h3>Labor, Transportation, Caregiving, Other (use as map filter?)</h3>
+                <div class="categories">
+                    <h3>Labor, Transportation, Caregiving, Other (use as map filter?)</h3>
+                </div>
+
+                <div class="list">
+                    <h3>Available Requests/Selected Requests (from map)</h3>
+                </div>
             </div>
 
-            <div class="list">
-                <h3>Available Requests/Selected Requests (from map)</h3>
+                <br>
+
+            <div class="blocks-bottom">
+                <div class="extra">
+                    <h3>Etc.</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius animi, debitis facere iure molestias dolores modi, hic consequuntur illum explicabo assumenda, repudiandae omnis doloribus soluta fugiat repellat ipsam delectus rem.
+                    </p>
+                </div>
             </div>
         </div>
-
-        <br>
-
-        <div class="blocks-bottom">
-            <div class="extra">
-                <h3>Etc.</h3>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius animi, debitis facere iure molestias dolores modi, hic consequuntur illum explicabo assumenda, repudiandae omnis doloribus soluta fugiat repellat ipsam delectus rem.
-                </p>
-            </div>
-        </div>
-    </div>
 </div>
 
 
@@ -105,10 +108,11 @@
 <script>
 
 $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
             });
         });
+
 
 </script>
 

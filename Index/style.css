@@ -2,10 +2,13 @@
   box-sizing: border-box;
   width: 100%;
   height: 100%;
+  color: #151E09;
 }
 
 body {
-  background-image: linear-gradient(180deg, #e0c468, #f39f88);
+  background-image: linear-gradient(180deg, #ebe6d6, #f9f8ee);
+  font-family: 'Montserrat', sans-serif;
+  /* background: #f9f8ee; */
 }
 
 h1 {
@@ -47,7 +50,8 @@ h1 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid #bc6c25;
+  filter: blur(2);
 }
 
 .col2 {
@@ -56,11 +60,19 @@ h1 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border-top: 1px solid black;
+  border-top: 2px solid #bc6c25;
+}
+
+.col1:hover {
+  -webkit-filter: blur(1.5px);
+}
+
+.col2:hover {
+  -webkit-filter: blur(1.5px);
 }
 
 button {
-  border: 2px solid #68cc70;
+  background-color: #FFFFFF;
   width: 100%;
   height: 70%;
   border-radius: 1rem;
@@ -68,10 +80,11 @@ button {
   text-align: center;
   justify-content: space-evenly;
   align-items: center;
+  box-shadow: 5px 10px 18px #888888;
 }
 
 .bttn {
-  border: 2px solid #68cc70;  
+  border: 4px solid #e7c7a2;
   width: 100%;
   height: 70%;
   border-radius: 1rem;
@@ -87,47 +100,69 @@ button {
 }
 
 form {
-  width: 100%;
+  width: 85%;
   height: 60%;
   margin-top: 13%;
   margin-left: 7%;
+  margin-right: 7%;
   align-items: center;
   display: flex;
   flex-direction: column;
+  background-image: linear-gradient(180deg, #ebe6d6, #f9f8ee);
+  /* background-color: #f9f8ee; */
 }
 
 .form-row {
-  width: 80%;
+  width: 90%;
   height: 20%;
-
 }
 
 .form-group {
-  width: 80%;
   height: 20%;
+}
+
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #dda15e;
+}
+
+form button:hover {
+  background: #dda15e;
+  color: white;
+}
+
+#submitButton {
+  background-color: #FFFFFF;
+  color: #151E09;
+  border: 3px solid #dda15e;
+  border-radius: 10px;
+}
+
+#submitButton:hover {
+  -webkit-filter: blur(1.5px);
 }
 
 .modal {
   width: 100%;
   height: 70%;
   margin-top: 9%;
+  opacity: white 1px;
 }
 
-.modal-open {
+/* .modal-open {
   overflow-y: auto !important;
+} */
+
+.modal-content {
+  /* background-color: #f9f8ee; */
+  background-image: linear-gradient(180deg, #ebe6d6, #f9f8ee);
+  
 }
 
-.submit_bttn{
+.submit_bttn {
   margin-top: 5%;
   align-items: center;
   flex-direction: column;
   display: flex;
   width: 50%;
-}
-
-/* MAP */
-
-#map {
-  width: 50%;
-  height: 450px;
 }

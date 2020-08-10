@@ -1,19 +1,13 @@
 
 $(document).ready(() =>  {
 
-
-
-
     var personalAPIKey = "AIzaSyA0rdSnRWTkL1PyhoHgsMoYfs8GhAJbJnw";
     var address = "1600+Amphitheatre+Parkway,+Mountain+View,+CA";
 
     var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=" + personalAPIKey;
 
-        
-
 
     $("#submitButton").on("click", function(){
-        
 
         var name = $("#inputName").val();
         var phoneNumber = $("#inputPhoneNumber").val();
@@ -76,6 +70,8 @@ $(document).ready(() =>  {
         
                 initMap(latitude, longitude);
 
+                document.getElementById ('map').innerHTML = latitude;
+
                 } else {
                     alert("ENTER CORRECT ADDRESS");
                 }
@@ -104,6 +100,7 @@ $(document).ready(() =>  {
         var map = new google.maps.Map(
 
         document.getElementById("map"),
+       
         {zoom: 16, center: saguaro}
 
         );

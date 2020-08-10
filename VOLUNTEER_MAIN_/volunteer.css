@@ -36,6 +36,12 @@ body {
     text-decoration: none;
     transition: all 0.3s;
   }
+
+  #map{
+  border: 2px solid red;
+  text-align: center;
+  align-items: center;
+}
   
   #sidebar {
     min-width: 250px;
