@@ -165,6 +165,14 @@ body {
     }
   }
 
+
+  
+#map {
+  width: 50%;
+  height: 450px;
+}
+
   h3 {
     font-family: ‘Montserrat’, sans-serif;
   }
+
