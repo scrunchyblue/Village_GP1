@@ -124,3 +124,10 @@ form {
   display: flex;
   width: 50%;
 }
+
+/* MAP */
+
+#map {
+  width: 50%;
+  height: 450px;
+}

@@ -118,7 +118,7 @@ $(document).ready(() => {
         console.log("full address: ", addingAddresstogether);
 
 
-        $("#theAddress").append(addingAddresstogether);
+        //$("#theAddress").append(addingAddresstogether);
 
         
         var ourQueryURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + addingAddresstogether + "&key=" + personalAPIKey;
@@ -143,7 +143,10 @@ $(document).ready(() => {
         
     
         })
+
+        
     })
+
 
 })
 // set conditionals so that the initMap runs based on if there are objects in the array.
