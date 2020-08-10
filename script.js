@@ -2,23 +2,17 @@
 $(document).ready(() =>  {
 
 
-
-
     var personalAPIKey = "AIzaSyA0rdSnRWTkL1PyhoHgsMoYfs8GhAJbJnw";
-    var address = "1600+Amphitheatre+Parkway,+Mountain+View,+CA";
-
-    var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=" + personalAPIKey;
-
-        
 
 
-    $("#submitButton").on("click", function(){
+
+    $("#submitButton").on("click", function(event){
+        console.log("submit Button pressed");
+        event.preventDefault();
         
 
         var name = $("#inputName").val();
-        var phoneNumber = $("#inputPhoneNumber").val();
         var firstAddress = $("#inputAddress").val();
-        var secondAddress = $("#inputAddress2").val();
         var cityofAddress = $("#inputCity").val();
         var stateofAddress = $("#inputState").val();
         var zipCodeofAddress = $("#inputZip").val();
@@ -26,9 +20,7 @@ $(document).ready(() =>  {
         var user = {
 
             name : name,
-            phoneNumber : phoneNumber,
             address1: firstAddress,
-            address2: secondAddress,
             city: cityofAddress,
             state: stateofAddress,
             zip: zipCodeofAddress
@@ -52,11 +44,11 @@ $(document).ready(() =>  {
 
             
 
-        var addingAddresstogether = secondAddress === "" ? `${firstAddress} ${cityofAddress} ${stateofAddress} ${zipCodeofAddress}` : `${firstAddress} ${secondAddress} ${cityofAddress} ${stateofAddress} ${zipCodeofAddress}`;
+        var addingAddresstogether = `${firstAddress} ${cityofAddress} ${stateofAddress} ${zipCodeofAddress}`;
         console.log("full address: ", addingAddresstogether);
 
 
-        $("#theAddress").append(addingAddresstogether);
+        //$("#theAddress").append(addingAddresstogether);
 
             
         var ourQueryURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + addingAddresstogether + "&key=" + personalAPIKey;
@@ -87,13 +79,11 @@ $(document).ready(() =>  {
 
 
 
-
-
-
     // set conditionals so that the initMap runs based on if there are objects in the array.
     var locationArr = [];
 
     function initMap(lat, long){
+        console.log("inside the initMap function");
 
         var  saguaro = {lat: lat, lng: long};
         
@@ -125,5 +115,12 @@ $(document).ready(() =>  {
             }
 
     }
+
+/*          VOLUNTEER.HTML                  */
+
+    $('#sidebarCollapse').on('click', function () {
+        console.log("I have been clicked");
+        $('#sidebar').toggleClass('active');
+    });
 
 })
