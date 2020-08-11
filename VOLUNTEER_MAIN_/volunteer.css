@@ -173,13 +173,15 @@ body {
 
   
 #map {
-  width: 100%;
+  width: 80%;
   height: 450px;
+  margin-left: 10%;
 }
 
-  h3 {
-    font-family: "Montserrat", sans-serif;
-  }
+
+h3 {
+  font-family: ‘Montserrat’, sans-serif;
+}
 
 footer, .navbar {
   background-color: #666e4a;
