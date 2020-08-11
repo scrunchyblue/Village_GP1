@@ -3,9 +3,6 @@
 <head>
     <title>MAIN PAGE W/ COLLAPSING SIDEBAR</title>
 
-
-    
-=======
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href=“https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap” rel=“stylesheet”>
     <link href=“https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap” rel=“stylesheet”>
@@ -35,12 +32,12 @@
 
         <ul class="list-unstyled components">
             
-            <p class="companyName"> CULDESAC </p>
+            <p class="companyName"> CulDeSac </p>
 
             <li class="active">
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-home"></i> Home</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li><a href="#">Switch to Requester Profile</a></li>
+                        <li><a href="#">Switch to Requester Account</a></li>
                     </ul>
             </li>
             <!-- or call it Account ^, using "Home" for the sake of the button, for now. -->
@@ -64,13 +61,11 @@
             <div class="container-fluid">
                 <button type="button" id="sidebarCollapse" class="btn">
                 <i class="fas fa-align-left"></i>
-                <span>Toggle Sidebar</span>
+                <!-- <span>Toggle Sidebar</span> -->
                 </button>
             </div>
         </nav>
 
-        <br>
-        <br>
 
         <!-- MAP WILL BE INSERTED BELOW -->
         <div id="map"></div>
@@ -81,14 +76,13 @@
         <div class="blocks-middle">
 
             <div class="categories">
-                <h3>completed Requests</h3>
+                <h3>Completed Requests</h3>
             </div>
 
             <div class="list">
                 <h3>Open Requests</h3>
             </div>
         </div>
-
         <br>
 
         <div class="blocks-bottom">
@@ -101,6 +95,11 @@
         </div>
     </div>
 </div>
+<footer>
+    <span>
+        <p>©Copyright 2020</p>
+    </span>
+</footer>
 
 <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0rdSnRWTkL1PyhoHgsMoYfs8GhAJbJnw&callback=initMap"></script>
 <script src="../volunteer.js"></script>
