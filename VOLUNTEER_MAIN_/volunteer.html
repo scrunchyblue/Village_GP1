@@ -32,12 +32,12 @@
 
         <ul class="list-unstyled components">
             
-            <p class="companyName"> CULDESAC </p>
+            <p class="companyName"> CulDeSac </p>
 
             <li class="active">
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-home"></i> Home</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li><a href="#">Switch to Requester Profile</a></li>
+                        <li><a href="#">Switch to Requester Account</a></li>
                     </ul>
             </li>
             <!-- or call it Account ^, using "Home" for the sake of the button, for now. -->
@@ -61,13 +61,11 @@
             <div class="container-fluid">
                 <button type="button" id="sidebarCollapse" class="btn">
                 <i class="fas fa-align-left"></i>
-                <span>Toggle Sidebar</span>
+                <!-- <span>Toggle Sidebar</span> -->
                 </button>
             </div>
         </nav>
 
-        <br>
-        <br>
 
         <!-- MAP WILL BE INSERTED BELOW -->
         <div id="map"></div>
@@ -78,19 +76,18 @@
         <div class="blocks-middle">
 
             <div class="categories">
-                <h3>Labor, Transportation, Caregiving, Other (use as map filter?)</h3>
+                <h3>Completed Requests</h3>
             </div>
 
             <div class="list">
-                <h3>Available Requests/Selected Requests (from map)</h3>
+                <h3>Open Requests</h3>
             </div>
         </div>
-
         <br>
 
         <div class="blocks-bottom">
             <div class="extra">
-                <h3>Etc.</h3>
+                <h3>Volunteer Log</h3>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius animi, debitis facere iure molestias dolores modi, hic consequuntur illum explicabo assumenda, repudiandae omnis doloribus soluta fugiat repellat ipsam delectus rem.
                 </p>
@@ -98,6 +95,11 @@
         </div>
     </div>
 </div>
+<footer>
+    <span>
+        <p>©Copyright 2020</p>
+    </span>
+</footer>
 
 <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0rdSnRWTkL1PyhoHgsMoYfs8GhAJbJnw&callback=initMap"></script>
 <script src="../volunteer.js"></script>
