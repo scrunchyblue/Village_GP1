@@ -171,6 +171,10 @@ body {
   }
 
 
+#Logo {
+  margin-left: 55px;
+}
+
   
 #map {
   width: 80%;
@@ -182,6 +186,11 @@ body {
 h3 {
   font-family: ‘Montserrat’, sans-serif;
 }
+
+.searchtext {
+  margin-left: 15%;
+}
+
 
 footer, .navbar {
   background-color: #666e4a;

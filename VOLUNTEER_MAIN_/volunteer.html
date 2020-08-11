@@ -3,31 +3,21 @@
 
 <head>
     <title>MAIN PAGE W/ COLLAPSING SIDEBAR</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        ​
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href=“https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap” rel=“stylesheet”>
     <link href=“https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap” rel=“stylesheet”>
-
-
+        ​
+        ​
     <script src="https://kit.fontawesome.com/ca00c5794e.js" crossorigin="anonymous"></script>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-
-    <link rel="stylesheet" href="./volunteer.css" />
+            
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+            
+            
+    <link rel="stylesheet" href="./volunteer.css"/>
     <script src="../script.js"></script>
-
-
 </head>
 
 <body>
@@ -37,12 +27,12 @@
 
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>LOGO</h3>
+                <h3 id="Logo"><a href="../Index/index.html"> <img src="https://i.pinimg.com/originals/40/d7/be/40d7bec2768bc8cfa69f6d8ed4f85c89.png" height="75" width="75" alt="Logo"> </a> </h3>
             </div>
 
             <ul class="list-unstyled components">
 
-                <p class="companyName"> CulDeSac </p>
+                <p class="companyName"> Village</p>
 
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
@@ -81,93 +71,81 @@
 
             <!-- MAP WILL BE INSERTED BELOW -->
             <div id="map"></div>
+            <br>
+            <p class="searchtext" >Search Your Local Area : <button id="searchbutton" ><input type="text" value="" id="inputfield"> Search </button> </p>
 
             <br>
 
+
+
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-2">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-5">
                         <div class="list-group">
-                                <a href="#" class="list-group-item list-group-item-action">
-                                  <div class="d-flex w-100 justify-content-between">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1">Barbara Lake</h5>
                                     <small class="text-muted">5 hours ago</small>
-                                  </div>
-                                  <p class="mb-1"><b>Household maintenance: </b>I had hip surgery 2 weeks ago. I need someone to help me with housekeeping and my shopping.</p>
-                                  <small class="text-muted">Lake Forest, CA</small>
-                                </a>
-                                <a href="#" class="list-group-item list-group-item-action">
-                                  <div class="d-flex w-100 justify-content-between">
+                                </div>
+                                <p class="mb-1"><b>Household maintenance: </b>I had hip surgery 2 weeks ago. I need someone to help me with housekeeping and my shopping.</p>
+                                <small class="text-muted">Lake Forest, CA</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1">Raul Ramirez</h5>
                                     <small class="text-muted">9 hours ago</small>
-                                  </div>
-                                  <p class="mb-1"><b>Personal care: </b>Seeking a hairstylist to come do my hair at my home.</p>
-                                  <small class="text-muted">Moreno Valley, CA</small>
-                                </a>
-                                <a href="#" class="list-group-item list-group-item-action">
-                                        <div class="d-flex w-100 justify-content-between">
-                                          <h5 class="mb-1">Deborah Hewitt</h5>
-                                          <small class="text-muted">18 hours ago</small>
-                                        </div>
-                                        <p class="mb-1"><b>Transportation: </b>Looking for someone to drive me to my local community center every M/W/F.</p>
-                                        <small class="text-muted">Manhattan Beach, CA</small>
-                                      </a>
-                                      <a href="#" class="list-group-item list-group-item-action">
-                                        <div class="d-flex w-100 justify-content-between">
-                                          <h5 class="mb-1">Abby Kahn</h5>
-                                          <small class="text-muted">23 hours ago</small>
-                                        </div>
-                                        <p class="mb-1"><b>Home modifications: </b>I am searching for a handyman that can install a ramp to my front porch.</p>
-                                        <small class="text-muted">Murrieta, CA</small>
-                                      </a>
-                                      <a href="#" class="list-group-item list-group-item-action">
-                                            <div class="d-flex w-100 justify-content-between">
-                                              <h5 class="mb-1">Cody Miles</h5>
-                                              <small class="text-muted">1 day ago</small>
-                                            </div>
-                                            <p class="mb-1"><b>Health care: </b>Seeking an occupational therapists with many years of experience.</p>
-                                            <small class="text-muted">Huntington Beach, CA</small>
-                                          </a>
-                                          <a href="#" class="list-group-item list-group-item-action">
-                                            <div class="d-flex w-100 justify-content-between">
-                                              <h5 class="mb-1">Connie Truong Hinrichs</h5>
-                                              <small class="text-muted">3 days ago</small>
-                                            </div>
-                                            <p class="mb-1"><b>Pet care: </b>I am in need of a dog walker for my 10 year old Labrador.</p>
-                                            <small class="text-muted">Riverside, CA</small>
-                                          </a>
-                              </div>
-                    <!-- <div class="bulletin"></div>
-                        <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
-                                <span aria-hidden="true">&times;</span>
+                                </div>
+                                <p class="mb-1"><b>Personal care: </b>Seeking a hairstylist to come do my hair at my home.</p>
+                                <small class="text-muted">Moreno Valley, CA</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Deborah Hewitt</h5>
+                                    <small class="text-muted">18 hours ago</small>
+                                </div>
+                                <p class="mb-1"><b>Transportation: </b>Looking for someone to drive me to my local community center every M/W/F.</p>
+                                <small class="text-muted">Manhattan Beach, CA</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Abby Kahn</h5>
+                                    <small class="text-muted">23 hours ago</small>
+                                </div>
+                                <p class="mb-1"><b>Home modifications: </b>I am searching for a handyman that can install a ramp to my front porch.</p>
+                                <small class="text-muted">Murrieta, CA</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Cody Miles</h5>
+                                    <small class="text-muted">1 day ago</small>
+                                </div>
+                                <p class="mb-1"><b>Health care: </b>Seeking an occupational therapist with many years of experience that speaks Spanish.</p>
+                                <small class="text-muted">Huntington Beach, CA</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Connie Truong Hinrichs</h5>
+                                    <small class="text-muted">3 days ago</small>
+                                </div>
+                                <p class="mb-1"><b>Pet care: </b>I am in need of a dog walker for my 10 year old Labrador.</p>
+                                <small class="text-muted">Riverside, CA</small>
+                            </a>
                         </div>
-                        <div class="modal-body">
-                            <p>Modal body text goes here.</p>
-                        </div>
-
-                        <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
-                            <span aria-hidden="true">&times;</span>
-                        </div>
-                        <div class="modal-body">
-                            <p>Modal body text goes here.</p>
-                        </div> 
-                        
-                        <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
-                            <span aria-hidden="true">&times;</span>
-                        </div>
-                        <div class="modal-body">
-                            <p>Modal body text goes here.</p>
-                        </div>  
-                </div>    -->
+                <div class="col-md-2">
+                </div>
                         
                 </div>
                 <div class="col-md-3">
-                        
+                    <div class="card" style="width: 18rem;">
+                        <img src="../VOLUNTEER_MAIN_/help.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Hello neighbor. How can we help?</h5>
+                            <p class="card-text">We are here for you. Ask our Virtual Assistant or find answers in our support section.</p>
+                            <a href="#" class="btn btn-primary">Get Support</a>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -175,78 +153,16 @@
 
         </div>
 
-    </div>
-</div>
-
-            <div class="blocks-middle">
-
-                <div class="categories">
-                    <h3>Completed Requests</h3>
-                </div>
-
-                <div class="list">
-                    <h3>Open Requests</h3>
-                </div>
-            </div>
-            <br>
-
-            <div class="blocks-bottom">
-                <div class="modal-header">
-                    <h5 class="modal-title">Barbara Lake</h5>
-                    <h7>Anaheim, CA</h7>
-                    <span aria-hidden="true">&times;</span>
-                </div>
-                <div class="modal-body">
-                    <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-header">
-                    <h5 class="modal-title">Mallory Kline</h5>
-                    <h7>Manhattan Beach, CA</h7>
-                    <span aria-hidden="true">&times;</span>
-                </div>
-                <div class="modal-body">
-                    <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-header">
-                    <h5 class="modal-title">Curtis Larson</h5>
-                    <h7>Lake Forest, CA</h7>
-                    <span aria-hidden="true">&times;</span>
-                </div>
-                <div class="modal-body">
-                    <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-header">
-                    <h5 class="modal-title">Scott Hellman</h5>
-                    <h7>Huntington Beach, CA</h7>
-                    <span aria-hidden="true">&times;</span>
-                </div>
-                <div class="modal-body">
-                    <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-header">
-                    <h5 class="modal-title">JJ Baker</h5>
-                    <h7>Riverside, CA</h7>
-                    <span aria-hidden="true">&times;</span>
-                </div>
-                <div class="modal-body">
-                    <p>Modal body text goes here.</p>
-                    <div class="extra">
-                        <h3>Volunteer Log</h3>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius animi, debitis facere iure
-                            molestias dolores modi, hic consequuntur illum explicabo assumenda, repudiandae omnis
-                            doloribus soluta fugiat repellat ipsam delectus rem.
-                        </p>
-                        
-                    </div>
-                </div>
-            </div>
-            <footer>
+        <footer>
                 <span>
                     <p>©Copyright 2020</p>
                 </span>
             </footer>
-        </div>
+
+    </div>
+</div>
+
+
 
 
         <script defer
