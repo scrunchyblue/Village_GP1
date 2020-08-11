@@ -1,92 +1,89 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>MAIN PAGE W/ COLLAPSING SIDEBAR</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href=“https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap” rel=“stylesheet”>
     <link href=“https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap” rel=“stylesheet”>
 
 
     <script src="https://kit.fontawesome.com/ca00c5794e.js" crossorigin="anonymous"></script>
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    
-    
-    <link rel="stylesheet" href="./volunteer.css"/>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="./volunteer.css" />
     <script src="../script.js"></script>
- 
+
 
 </head>
+
 <body>
 
 
-<div class="wrapper">
-	
-    <nav id="sidebar">
-        <div class="sidebar-header">
-            <h3>LOGO</h3>
-        </div>
+    <div class="wrapper">
 
-        <ul class="list-unstyled components">
-            
-            <p class="companyName"> CULDESAC </p>
-
-            <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-home"></i> Home</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li><a href="#">Switch to Requester Profile</a></li>
-                    </ul>
-            </li>
-            <!-- or call it Account ^, using "Home" for the sake of the button, for now. -->
-            <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
-            <li><a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-hammer"></i> Requests</a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li><a href="#">Completed Requests</a></li>
-                    <li><a href="#">Open Requests</a></li>
-                </ul>
-            </li>
-                
-                <li><a href="#"><i class="fas fa-sign-out-alt"></i> Log-out</a></li>
-        </ul>
-    </nav>
-
-
-    <div id="content">
-        
-        <nav class="navbar">
-        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
-            <div class="container-fluid">
-                <button type="button" id="sidebarCollapse" class="btn">
-                <i class="fas fa-align-left"></i>
-                <span>Toggle Sidebar</span>
-                </button>
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>LOGO</h3>
             </div>
+
+            <ul class="list-unstyled components">
+
+                <p class="companyName"> CulDeSac </p>
+
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
+                            class="fas fa-home"></i> Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li><a href="#">Switch to Requester Account</a></li>
+                    </ul>
+                </li>
+                <!-- or call it Account ^, using "Home" for the sake of the button, for now. -->
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
+                            class="fas fa-hammer"></i> Requests</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li><a href="#">Completed Requests</a></li>
+                        <li><a href="#">Open Requests</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#"><i class="fas fa-sign-out-alt"></i> Log-out</a></li>
+            </ul>
         </nav>
 
-        <br>
-        <br>
 
-        <!-- MAP WILL BE INSERTED BELOW -->
-        <div id="map"></div>
+        <div id="content">
 
-        <br>
-        <div id="theAddress"></div>
+            <nav class="navbar">
+                <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn">
+                        <i class="fas fa-align-left"></i>
+                        <!-- <span>Toggle Sidebar</span> -->
+                    </button>
+                </div>
+            </nav>
 
-        <div class="blocks-middle">
 
-            <div class="categories">
-                <h3>Labor, Transportation, Caregiving, Other (use as map filter?)</h3>
-            </div>
+            <!-- MAP WILL BE INSERTED BELOW -->
+            <div id="map"></div>
 
-            <div class="list">
-                <h3>Available Requests/Selected Requests (from map)</h3>
-            </div>
-        </div>
+            <br>
 
-        <br>
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
@@ -181,8 +178,81 @@
     </div>
 </div>
 
-<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0rdSnRWTkL1PyhoHgsMoYfs8GhAJbJnw&callback=initMap"></script>
-<script src="../volunteer.js"></script>
+            <div class="blocks-middle">
+
+                <div class="categories">
+                    <h3>Completed Requests</h3>
+                </div>
+
+                <div class="list">
+                    <h3>Open Requests</h3>
+                </div>
+            </div>
+            <br>
+
+            <div class="blocks-bottom">
+                <div class="modal-header">
+                    <h5 class="modal-title">Barbara Lake</h5>
+                    <h7>Anaheim, CA</h7>
+                    <span aria-hidden="true">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-header">
+                    <h5 class="modal-title">Mallory Kline</h5>
+                    <h7>Manhattan Beach, CA</h7>
+                    <span aria-hidden="true">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-header">
+                    <h5 class="modal-title">Curtis Larson</h5>
+                    <h7>Lake Forest, CA</h7>
+                    <span aria-hidden="true">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-header">
+                    <h5 class="modal-title">Scott Hellman</h5>
+                    <h7>Huntington Beach, CA</h7>
+                    <span aria-hidden="true">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-header">
+                    <h5 class="modal-title">JJ Baker</h5>
+                    <h7>Riverside, CA</h7>
+                    <span aria-hidden="true">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                    <div class="extra">
+                        <h3>Volunteer Log</h3>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius animi, debitis facere iure
+                            molestias dolores modi, hic consequuntur illum explicabo assumenda, repudiandae omnis
+                            doloribus soluta fugiat repellat ipsam delectus rem.
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <span>
+                    <p>©Copyright 2020</p>
+                </span>
+            </footer>
+        </div>
+
+
+        <script defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0rdSnRWTkL1PyhoHgsMoYfs8GhAJbJnw&callback=initMap"></script>
+        <script src="../volunteer.js"></script>
 
 </body>
+
 </html>
