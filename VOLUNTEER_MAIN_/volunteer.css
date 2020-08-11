@@ -168,8 +168,9 @@ body {
 
   
 #map {
-  width: 50%;
+  width: 80%;
   height: 450px;
+  margin-left: 10%;
 }
 
 h3 {
