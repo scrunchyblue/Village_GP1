@@ -25,6 +25,10 @@ body {
     transition: all 0.3s;
   }
   
+  .tagline {
+    font-size: 60px;
+  }
+
   /* Side Bar*/
   
   #sidebar.active {
@@ -41,7 +45,7 @@ body {
     min-width: 250px;
     max-width: 250px;
     background: rgb(102,110,74);
-    background: linear-gradient(0deg, rgba(102,110,74,0.48082983193277307) 0%, rgba(249,248,238,1) 100%);
+  background: linear-gradient(0deg, rgba(102,110,74,0.48082983193277307) 0%, rgba(249,248,238,1) 100%);
     color: #151E09;
     transition: all 0.3s;
   }
@@ -225,4 +229,9 @@ footer {
 
 .searchbox {
   margin-left: 10%;
+}
+
+.btn-primary {
+  background-color:#151E09;
+  border:#151E09
 }
