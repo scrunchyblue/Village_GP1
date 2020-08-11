@@ -54,6 +54,11 @@ footer {
   align-items: center;
 }
 
+.orangeblock{
+  background-color: #BC6C25;
+  height: 10px;
+}
+
 footer {
   background-color: #666e4a;
   color: white;
