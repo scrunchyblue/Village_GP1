@@ -35,17 +35,15 @@
                 <p class="companyName"> Village</p>
 
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
+                    <a href="#homeSubmenu"  aria-expanded="false" class="dropdown-toggle"><i
                             class="fas fa-home"></i> Home</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li><a href="#">Switch to Requester Account</a></li>
-                    </ul>
                 </li>
                 <!-- or call it Account ^, using "Home" for the sake of the button, for now. -->
                 <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
                 <li><a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
                             class="fas fa-hammer"></i> Requests</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <!-- May not need v -->
                         <li><a href="#">Completed Requests</a></li>
                         <li><a href="#">Open Requests</a></li>
                     </ul>
@@ -72,13 +70,17 @@
             <!-- MAP WILL BE INSERTED BELOW -->
             <div id="map"></div>
             <br>
-            <p class="searchtext" >Search Your Local Area : <button id="searchbutton" ><input type="text" value="" id="inputfield"> Search </button> </p>
-
             <br>
+            
 
 
 
         <div class="container">
+
+            <!-- placed search box within container -->
+            <div class="searchbox">
+            <p class="searchtext" >Search Your Local Area : <button id="searchbutton" ><input type="text" value="" id="inputfield"> Search </button> </p>
+            </div>
             <div class="row">
                 <div class="col-md-2">
                 </div>
@@ -133,14 +135,12 @@
                                 <small class="text-muted">Riverside, CA</small>
                             </a>
                         </div>
-                <div class="col-md-2">
-                </div>
                         
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-5">
                     <div class="card" style="width: 18rem;">
-                        <img src="../VOLUNTEER_MAIN_/help.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
+                            <img src="../VOLUNTEER_MAIN_/help.jpg" class="card-img-top" alt="...">
                             <h5 class="card-title">Hello neighbor. How can we help?</h5>
                             <p class="card-text">We are here for you. Ask our Virtual Assistant or find answers in our support section.</p>
                             <a href="#" class="btn btn-primary">Get Support</a>

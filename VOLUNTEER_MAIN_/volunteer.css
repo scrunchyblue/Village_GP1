@@ -11,12 +11,12 @@ body {
   }
   
   .companyName {
-    color: black;
+    color: #151E09;
     font-weight: bolder;
     font-size: 25px;
     text-align: center;
-    background-image: linear-gradient(180deg, #EBE6D6, #F9F8EE);
-    font-family: ‘Montserrat’, sans-serif;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(249,248,238,1) 100%);    font-family: ‘Montserrat’, sans-serif;
   }
 
   a, a:hover, a:focus {
@@ -40,18 +40,19 @@ body {
   #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background-color: #FFFFFF;
-    color: black;
+    background: rgb(102,110,74);
+    background: linear-gradient(0deg, rgba(102,110,74,0.48082983193277307) 0%, rgba(249,248,238,1) 100%);
+    color: #151E09;
     transition: all 0.3s;
   }
   
   #sidebar .sidebar-header {
     padding: 20px;
-    background-color: #FFFFFF;
-  }
+    /* background: rgb(255,255,255); */
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(249,248,238,1) 100%);  }
   #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #151E09;
   }
   
   #sidebar ul p {
@@ -65,13 +66,13 @@ body {
   }
   
   #sidebar ul li a:hover {
-    background: lightgrey;
+    background: #DDA15E;
   }
   
   #sidebar ul li.active > a,
   a[aria-expanded="true"] {
     color: black;
-    background: lightgrey;
+    background: #DDA15E;
     
   }
   
@@ -99,6 +100,8 @@ body {
     /* padding: 20px; */
     min-height: 100vh;
     transition: all 0.3s;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(249,248,238,1) 100%);
   }
   
   button.btn {
@@ -192,10 +195,34 @@ h3 {
 }
 
 
-footer, .navbar {
+footer {
   background-color: #666e4a;
   color: white;
   padding: 5px 20px;
   text-align: center;
+  opacity: .5;
 }
 
+.navbar {
+  background-color: #666e4a;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  opacity: .5;
+}
+
+.list-group {
+  border-radius: 15px;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.card-title {
+  padding-top:10px;
+}
+
+.searchbox {
+  margin-left: 10%;
+}
