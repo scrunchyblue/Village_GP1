@@ -22,7 +22,7 @@ function initMap(coords) {
 
         document.getElementById("map"),
         {
-            zoom: 16,
+            zoom: 11,
             center: coords[coords.length -1]
         }
 
