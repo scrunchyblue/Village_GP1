@@ -39,7 +39,7 @@ $(document).ready(() => {
 
 
 
-        window.location.replace("../VOLUNTEER_MAIN_/volunteer.html");
+        window.location.replace("main.html");
 
     
     })
